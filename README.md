@@ -112,3 +112,16 @@ DELETE /notes/{note_id}
 
 Response: 204 No Content
 
+
+
+## Installation & Run
+
+Follow these steps to set up and run the FastAPI backend locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repo-url>
+cd <your-backend-folder>
+
+
