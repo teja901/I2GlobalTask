@@ -20,14 +20,14 @@ async def connect_to_mongo():
     await notes_coll.create_index("note_id", unique=True)
     await notes_coll.create_index("user_id")
 
-    print("✅ Connected to MongoDB Atlas")
+    print("Connected to MongoDB Atlas")
 
 
 async def close_mongo_connection():
     global client
     if client:
         client.close()
-        print("❌ MongoDB connection closed")
+        print("MongoDB connection closed")
 
 
 def get_database():

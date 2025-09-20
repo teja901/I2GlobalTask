@@ -19,3 +19,11 @@ class NoteInDB(BaseModel):
     note_content: Optional[str]
     created_on: datetime
     last_update: datetime
+    
+    
+    class Config:
+        json_encoders = {
+            datetime: lambda v: v.strftime("%d %b %Y")
+        }
+    
+    

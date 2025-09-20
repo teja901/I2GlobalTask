@@ -17,6 +17,19 @@ class UserPublic(BaseModel):
     user_email: EmailStr
     created_on: datetime
     last_update: datetime
+    
+    # @property
+    # def created_on(self):
+    #     return self.created_on.strftime("%d %b %Y, %I:%M %p")
+
+    # @property
+    # def last_update(self):
+    #     return self.last_update.strftime("%d %b %Y, %I:%M %p")
+    
+    class Config:
+        json_encoders = {
+            datetime: lambda v: v.strftime("%d %b %Y")
+        }
 
 class TokenResponse(BaseModel):
     access_token: str
