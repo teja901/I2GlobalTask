@@ -124,4 +124,18 @@ Follow these steps to set up and run the FastAPI backend locally.
 git clone <your-repo-url>
 cd <your-backend-folder>
 
+python -m venv venv
+
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+.env file MONGO_URI=mongo atlas url
+MONGO_DB_NAME=dbname
+JWT_SECRET=secretkey
+JWT_ALGORITHM=HS256
+JWT_EXPIRATION_MINUTES=60
+
+uvicorn app.main:app --reload
+
 
